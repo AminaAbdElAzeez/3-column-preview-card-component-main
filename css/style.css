@@ -1,0 +1,146 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+:root {
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhiteParagraphs: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+/* Card Section */
+.card {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryLightGray);
+    margin-bottom: 10px;
+}
+.card .container {
+    width: 750px;
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+}
+.card .container .item {
+    padding: 40px 35px;
+}
+.card .container .item:first-child {
+    background-color: var(--brightOrange);
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+.card .container .item:nth-child(2) {
+    background-color: var(--darkCyan);
+}
+.card .container .item:nth-child(3) {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    -ms-border-radius: 0px 10px 10px 0px;
+    -o-border-radius: 0px 10px 10px 0px;
+}
+.card .container .item img {
+    width: 55px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+.card .container .item .title {
+    text-transform: uppercase;
+    color: var(--veryLightGray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.card .container .item .title + p {
+    color: var(--TransparentWhiteParagraphs);
+    font-size: 13px;
+    margin-bottom: 75px;
+    line-height: 1.6;
+    width: 182px;
+}
+.card .container .item .btn {
+    width: 130px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: var(--veryLightGray);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: border 0.1s, background-color 0.1s;
+    -webkit-transition: border 0.1s, background-color 0.1s;
+    -moz-transition: border 0.1s, background-color 0.1s;
+    -ms-transition: border 0.1s, background-color 0.1s;
+    -o-transition: border 0.1s, background-color 0.1s;
+}
+.card .container .item:first-child .btn {
+    color: var(--brightOrange);
+}
+.card .container .item:first-child .btn:hover {
+    border: 2px solid var(--veryLightGray);
+    background-color: var(--brightOrange);
+    color: var(--veryLightGray);
+}
+.card .container .item:nth-child(2) .btn {
+    color: var(--darkCyan);
+}
+.card .container .item:nth-child(2) .btn:hover {
+    border: 2px solid var(--veryLightGray);
+    background-color: var(--darkCyan);
+    color: var(--veryLightGray);
+
+}
+.card .container .item:last-child .btn {
+    color: var(--veryDarkCyan);
+}
+.card .container .item:last-child .btn:hover {
+    border: 2px solid var(--veryLightGray);
+    background-color: var(--veryDarkCyan);
+    color: var(--veryLightGray);
+}
+
+@media (max-width:800px) {
+    .card {
+        height: calc(100vh + 600px);
+    }
+    .card .container {
+        width: 300px;
+        grid-template-columns: repeat(1,300px);
+    }
+    .card .container .item .title + p {
+        width: 205px;
+    }
+    .card .container .item:first-child {
+        border-radius: 10px 10px 0 0px;
+        -webkit-border-radius: 10px 10px 0 0px;
+        -moz-border-radius: 10px 10px 0 0px;
+        -ms-border-radius: 10px 10px 0 0px;
+        -o-border-radius: 10px 10px 0 0px;
+}
+    .card .container .item:nth-child(3) {
+        background-color: var(--veryDarkCyan);
+        border-radius: 0px 0px 10px 10px;
+        -webkit-border-radius: 0px 0px 10px 10px;
+        -moz-border-radius: 0px 0px 10px 10px;
+        -ms-border-radius: 0px 0px 10px 10px;
+        -o-border-radius: 0px 0px 10px 10px;
+}
+}
